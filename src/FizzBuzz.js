@@ -1,17 +1,22 @@
 function FizzBuzz() {}
 
 FizzBuzz.prototype.play = function(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return "FizzBuzz";
-  }
+  let result = "";
+  let isMultiple = false;
 
   if (number % 3 === 0) {
-    return "Fizz";
+    result += "Fizz";
+    isMultiple = true;
   }
 
   if (number % 5 === 0) {
-    return "Buzz";
+    result += "Buzz";
+    isMultiple = true;
   }
 
-  return String(number);
+  if (!isMultiple) {
+    result += String(number);
+  }
+
+  return result;
 };
