@@ -14,7 +14,7 @@ class FizzBuzz {
     }
 
     if (!isMultiple) {
-      result += String(number);
+      result = String(number);
     }
 
     return result;
